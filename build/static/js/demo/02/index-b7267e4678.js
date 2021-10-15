@@ -13,9 +13,9 @@ console.log('1');
 
 setTimeout(function() {
     console.log('2');
-    process.nextTick(function() {
-        console.log('3');
-    })
+    // process.nextTick(function() {
+    //     console.log('3');
+    // })
     new Promise(function(resolve) {
         console.log('4');
         resolve();
@@ -23,9 +23,9 @@ setTimeout(function() {
         console.log('5')
     })
 })
-process.nextTick(function() {
-    console.log('6');
-})
+// process.nextTick(function() {
+//     console.log('6');
+// })
 new Promise(function(resolve) {
     console.log('7');
     resolve();
@@ -35,9 +35,9 @@ new Promise(function(resolve) {
  
 setTimeout(function() {
     console.log('9');
-    process.nextTick(function() {
-        console.log('10');
-    })
+    // process.nextTick(function() {
+    //     console.log('10');
+    // })
     new Promise(function(resolve) {
         console.log('11');
         resolve();
