@@ -17,11 +17,14 @@ for(let i = 0; i < 10; i++) {
 console.log(a);
 
 // var
+// 用来计数的循环变量泄露为全局变量
 var b = [];
 for(var j = 0; j < 10; j++) {
     b.push(j);
 }
-console.log(b, j);
+console.log(b);
+// 仍然可以访问到j, 泄露成了全局变量
+console.log(j);
 
 // var
 var c = [];
